@@ -6,6 +6,12 @@ public class ImmutableArrayList implements ImmutableList {
     private final Object[] array;
     private final int length;
 
+    public  ImmutableArrayList(Object e) {
+        array = new Object[1];
+        array[0] = e;
+        length = 1;
+    }
+
     public ImmutableArrayList(Object[] arr) {
         array = arr;
         length = arr.length;
