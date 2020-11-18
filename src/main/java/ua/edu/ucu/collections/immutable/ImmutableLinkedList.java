@@ -1,13 +1,11 @@
 package ua.edu.ucu.collections.immutable;
 
 public class ImmutableLinkedList implements ImmutableList{
-    public Node head;
-    public Node tail;
+    private final Node head;
     private int length = 0;
 
     public ImmutableLinkedList(Object e) {
         head = new Node(e);
-        tail = head;
         length++;
     }
 
@@ -248,12 +246,8 @@ public class ImmutableLinkedList implements ImmutableList{
 }
 
 class Node {
-    Object data;
-    Node next = null;
+    public Object data;
+    public Node next = null;
 
     Node(Object d) { data = d; }
-
-    public Node clone() throws CloneNotSupportedException {
-        return (Node) super.clone();
-    }
 }
